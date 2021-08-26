@@ -1,7 +1,33 @@
+<!DOCTYPE html>
+
 <html>
+
 <head>
+
+<meta charset="UTF-8">
+
+<title>관리자 이메일 쓰기</title>
+
 </head>
+
 <body>
-미리몽~ 메롱
+
+<h1>MultiPartEmail</h1>
+
+<form action="multipartEmail.jsp" method="post" enctype="multipart/form-data">
+
+받는사람 이메일주소: <input type="text" name="receiver"><br>
+
+메일 제목: <input type="text" name="subject"><br>
+
+첨부 파일: <input type="file" name="fileName"><br>
+
+메일 내용: <textarea rows="7" cols="40" name="content"></textarea><br>
+
+<button type="submit">전송</button>
+
+</form>
+
 </body>
+
 </html>
