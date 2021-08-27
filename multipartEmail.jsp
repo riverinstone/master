@@ -122,11 +122,11 @@ multiPartEmail.setStartTLSEnabled(true); // TLS 접속 활성화
 
 // 보내는 사람=> daum으로 SMTP 서버로 연결했기 때문에 보내는 메일도 daum이 되어야한다
 
-multiPartEmail.setFrom("kisk923@daum.net","보내는 사람","UTF-8");
+multiPartEmail.setFrom(sender,"보내는 사람","UTF-8");
 
 // 받는 사람
 
-multiPartEmail.addTo(kisk923@daum.net,"받는 사람","UTF-8");
+multiPartEmail.addTo(receiver,"받는 사람","UTF-8");
 
  
 
