@@ -8,43 +8,16 @@
 
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-
-pageEncoding="UTF-8"%>
-
-<%
-
-//(1) 업로드 작업
-
-// 1 request
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
  
-
-// 2 upload 폴더 만들고 물리적 경로
-
-//ServletContext application = request.getServletContext(); => 이미존재
 
 String realPath = application.getRealPath("/temp");
 
 System.out.println("realPath : " + realPath);
 
- 
-
-// 3 파일업로드 최대크기 제한값
 
 int maxPostSize = 1024 * 1024 * 10; // 1024byte * 1024 * 10; (업로드 10MB 제한)
-
- 
-
-// 4 한글처리 유니코드로 설정 "utf-8"
-
- 
-
-// 5 업로드하는 파일명이 기존 업로드된 파일명과 같은 경우 => 파일명 자동변경 정책
-
- 
-
-// 파일업로드 처리 완료!
 
 MultipartRequest multi
 
@@ -91,7 +64,6 @@ MultiPartEmail multiPartEmail = new MultiPartEmail();
 // 파라미터 가져오기
 
 String receiver = multi.getParameter("receiver");
-
 String receiver = multi.getParameter("sender");
 
 String subject = multi.getParameter("subject");
